@@ -64,6 +64,8 @@ public class Calculadora {
             case "-" -> op=op-Double.parseDouble(operador);
             case "*" -> op=op*Double.parseDouble(operador);
             case "/" -> op=op/Double.parseDouble(operador);
+            /* Nueva funcionalidad de la calculadora */
+            case "log" -> op=Math.log(op);
         }
         log.add(operacion);
         log.add(op+"");
@@ -74,5 +76,7 @@ public class Calculadora {
     static boolean necesitaOperador(String operacion){       
         return("*,+,-,/".contains(operacion));
     }
+
+    
     
 }
